@@ -102,8 +102,14 @@ def check_game_over(board):
             return False
 # Check for possible horizontal merges
 # Game is not over if adjacent horizontal tiles can merge
-
+    for row_index in range(GRID_SIZE):
+        for column_index in range(GRID_SIZE - 1):
+            if board[row_index][column_index] == board[row_index][column_index + 1]:
+                return False
 # Check for possible vertical merges
 # Game is not over if adjacent vertical tiles can merge
-
+    for column_index in range(GRID_SIZE):
+        for row_index in range(GRID_SIZE - 1):
+            if board[row_index][column_index] == board[row_index + 1][column_index]:
+                return False
 # No moves left; game is over
