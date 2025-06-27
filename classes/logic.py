@@ -57,7 +57,7 @@ def merge(board):
                 board[row_index][column_index + 1] = 0
                 merged = True
 # Return the updated board and merge status
-
+    return board, merged
 # Reverse each row (used for right move)
 
 # Transpose the matrix (used for up/down moves)
