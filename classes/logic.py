@@ -13,7 +13,9 @@ def add_new_tile(board):
 # Keep generating until an empty cell is found
 # Retry row
 # Retry column
-
+    while board[row_index][column_index] != 0:
+        row_index = random.randint(0, GRID_SIZE - 1)
+        column_index = random.randint(0, GRID_SIZE - 1)
 # Place a new tile (value 2) at the selected empty cell
 
 # Initialize a new empty board
