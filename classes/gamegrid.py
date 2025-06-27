@@ -71,7 +71,10 @@ class GameGrid(Frame):
 # Start with an empty matrix
 # Add the first random tile
 # Add the second random tile
-
+    def init_matrix(self):
+        self.matrix = logic.start_game()
+        logic.add_new_tile(self.matrix)
+        logic.add_new_tile(self.matrix)
 # Update the visual tiles based on the matrix values
 # Loop over each row
 # Loop over each column
