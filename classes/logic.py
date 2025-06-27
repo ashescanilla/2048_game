@@ -31,7 +31,14 @@ def compress(board):
 # Check if the tile actually moved
 # Mark as moved
 # Increment the position for the next tile
-
+    for row_index in range(GRID_SIZE):
+        position = 0
+        for column_index in range(GRID_SIZE):
+            if board[row_index][column_index] != 0:
+                new_board[row_index][position] = board[row_index][column_index]
+                if column_index != position:
+                    moved = True
+                position += 1
 # Return the new board and move status
 
 # Track whether any merge occurred
