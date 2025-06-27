@@ -6,9 +6,9 @@ import random
 import logic 
 # Import constants for game settings and styling
 import constants as constants_module 
-
+def generate_random_position():
 # Generate a random index within grid bounds
-
+    return random.randint(0, constants_module.GRID_LEN - 1) 
 # Define the main GameGrid class inheriting from Tkinter Frame
 # Initialize the game window
 # Initialize the parent Frame class
