@@ -113,3 +113,4 @@ def check_game_over(board):
             if board[row_index][column_index] == board[row_index + 1][column_index]:
                 return False
 # No moves left; game is over
+    return True
