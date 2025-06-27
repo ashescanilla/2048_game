@@ -7,7 +7,9 @@ def start_game():
     return [[0] * GRID_SIZE for _ in range(GRID_SIZE)]
 # Randomly select a row index
 # Randomly select a column index
-
+def add_new_tile(board):
+    row_index = random.randint(0, GRID_SIZE - 1)
+    column_index = random.randint(0, GRID_SIZE - 1)
 # Keep generating until an empty cell is found
 # Retry row
 # Retry column
