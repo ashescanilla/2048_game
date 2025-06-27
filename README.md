@@ -1,4 +1,4 @@
-# 2048_game
+# 2048 Game
 
 A simple implementation of the classic **2048 puzzle game**, built using **Python** and **Tkinter GUI toolkit**.
 
@@ -15,8 +15,11 @@ A simple implementation of the classic **2048 puzzle game**, built using **Pytho
 - Your goal is to reach the **2048 tile**.
 
 ---
+```
 
 ## 🗂️ Project Structure
+
+2048-game/
 ├── main.py 
 └── classes/
 ├── init.py 
@@ -24,6 +27,7 @@ A simple implementation of the classic **2048 puzzle game**, built using **Pytho
 ├── logic.py 
 └── constants.py 
 
+````
 ---
 
 ## 🧠 Features
@@ -44,6 +48,16 @@ Grid size, tile colors, and font size in classes/constants.py
 
 Add animations or score tracking (future enhancement)
 
+---
+## 📦 Possible Enhancements
+- Add score tracking
+
+- Implement undo functionality
+
+- Highlight the tile that just merged
+
+- Add restart button
+ 
 ---
 
 ## ▶️ Running the Game
