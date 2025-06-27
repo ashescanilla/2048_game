@@ -20,7 +20,9 @@ def add_new_tile(board):
     board[row_index][column_index] = 2
 # Initialize a new empty board
 # Track whether any tile was moved
-
+def compress(board):
+    new_board = [[0] * GRID_SIZE for _ in range(GRID_SIZE)]
+    moved = False
 # Loop through each row
 # Position to place the next non-zero tile
 # Loop through each column in the row
