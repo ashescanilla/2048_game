@@ -3,7 +3,8 @@ import random
 # Define the size of the 2048 game board (4x4 grid)
 GRID_SIZE = 4
 # Create and return a 4x4 grid initialized with zeros
-
+def start_game():
+    return [[0] * GRID_SIZE for _ in range(GRID_SIZE)]
 # Randomly select a row index
 # Randomly select a column index
 
