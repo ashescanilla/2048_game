@@ -86,7 +86,19 @@ class GameGrid(Frame):
 # Set background color
 # Set text color
 # Refresh the UI to reflect updates
-
+    def update_grid_cells(self):
+        for row_index in range(constants_module.GRID_LEN):
+            for column_index in range(constants_module.GRID_LEN):
+                current_tile_value = self.matrix[row_index][column_index]
+                if current_tile_value == 0:
+                    self.grid_cells[row_index][column_index].configure(
+                        text="", bg=constants_module.BACKGROUND_COLOR_CELL_EMPTY)
+                else:
+                    self.grid_cells[row_index][column_index].configure(
+                        text=str(current_tile_value),
+                        bg=constants_module.BACKGROUND_COLOR_DICT[current_tile_value],
+                        fg=constants_module.FOREGROUND_COLOR_DICT[current_tile_value])
+        self.update_idletasks()
 # Handle keyboard key press
 # Get the string name of the key pressed
 # If the key is one of the valid commands
