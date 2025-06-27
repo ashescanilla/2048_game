@@ -39,3 +39,4 @@ FOREGROUND_COLOR_DICT = {
     2048: "#f9f6f2",    # Off-white
 }
 # Font used for displaying tile numbers (font family, size, style)
+FONT = ("Verdana", 40, "bold")
