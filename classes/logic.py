@@ -17,7 +17,7 @@ def add_new_tile(board):
         row_index = random.randint(0, GRID_SIZE - 1)
         column_index = random.randint(0, GRID_SIZE - 1)
 # Place a new tile (value 2) at the selected empty cell
-
+    board[row_index][column_index] = 2
 # Initialize a new empty board
 # Track whether any tile was moved
 
