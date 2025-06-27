@@ -96,7 +96,10 @@ def move_down(board):
     return transpose(moved_board), moved
 # Check for any empty cell in the board
 # Game is not over if at least one empty cell exists
-
+def check_game_over(board):
+    for row in board:
+        if 0 in row:
+            return False
 # Check for possible horizontal merges
 # Game is not over if adjacent horizontal tiles can merge
 
