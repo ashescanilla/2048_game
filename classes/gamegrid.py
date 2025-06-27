@@ -108,7 +108,15 @@ class GameGrid(Frame):
 # Update the visual tiles
 # Check if no more moves are possible
 # Show "Game Over" message
-
+    def key_down_handler(self, event):
+        user_key = event.keysym
+        if user_key in self.commands:
+            self.matrix, move_valid = self.commands[user_key](self.matrix)
+            if move_valid:
+                logic.add_new_tile(self.matrix)
+                self.update_grid_cells()
+                if logic.check_game_over(self.matrix):
+                    self.game_over_display()
 # Display a "Game Over" message on screen
 # Create a frame for the message
 # Center the frame in the window
