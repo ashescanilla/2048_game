@@ -1,7 +1,11 @@
 # Import Tkinter widgets and alignment constant
+from tkinter import Frame, Label, CENTER 
 # Import random module for generating random positions
+import random
 # Import the custom logic module for game functions
+import logic 
 # Import constants for game settings and styling
+import constants as constants_module 
 
 # Generate a random index within grid bounds
 
