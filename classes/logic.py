@@ -48,7 +48,14 @@ def compress(board):
 # Merge tiles by doubling the value
 # Set the merged tile to zero
 # Mark as merged
-
+def merge(board):
+    merged = False
+    for row_index in range(GRID_SIZE):
+        for column_index in range(GRID_SIZE - 1):
+            if board[row_index][column_index] == board[row_index][column_index + 1] and board[row_index][column_index] != 0:
+                board[row_index][column_index] *= 2
+                board[row_index][column_index + 1] = 0
+                merged = True
 # Return the updated board and merge status
 
 # Reverse each row (used for right move)
