@@ -54,7 +54,19 @@ class GameGrid(Frame):
 # Place the label inside the cell
 # Add the label to the row list
 # Add the row to the grid_cells 2D list
-
+        for row_index in range(constants_module.GRID_LEN):
+            grid_row = []
+            for column_index in range(constants_module.GRID_LEN):
+                cell = Frame(background, bg=constants_module.BACKGROUND_COLOR_CELL_EMPTY,
+                             width=constants_module.SIZE / constants_module.GRID_LEN,
+                             height=constants_module.SIZE / constants_module.GRID_LEN)
+                cell.grid(row=row_index, column=column_index, padx=constants_module.GRID_PADDING,
+                          pady=constants_module.GRID_PADDING)
+                label = Label(master=cell, text="", bg=constants_module.BACKGROUND_COLOR_CELL_EMPTY,
+                              justify=CENTER, font=constants_module.FONT, width=4, height=2)
+                label.grid()
+                grid_row.append(label)
+            self.grid_cells.append(grid_row)
 # Initialize the game matrix with starting tiles
 # Start with an empty matrix
 # Add the first random tile
