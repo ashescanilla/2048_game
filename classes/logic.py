@@ -59,9 +59,11 @@ def merge(board):
 # Return the updated board and merge status
     return board, merged
 # Reverse each row (used for right move)
-
+def reverse(board):
+    return [row[::-1] for row in board]
 # Transpose the matrix (used for up/down moves)
-
+def transpose(board):
+    return [list(row) for row in zip(*board)]
 # First compress the tiles to the left
 # Then merge adjacent equal tiles
 # Compress again to shift after merging
