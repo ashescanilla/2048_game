@@ -122,3 +122,10 @@ class GameGrid(Frame):
 # Center the frame in the window
 # Create a label for "Game Over"
 # Pack the label into the frame
+    def game_over_display(self):
+        game_over_frame = Frame(self, borderwidth=2)
+        game_over_frame.place(relx=0.5, rely=0.5, anchor="center")
+        game_over_label = Label(game_over_frame, text="Game Over!", bg=constants_module.BACKGROUND_COLOR_CELL_EMPTY,
+                                fg=constants_module.FOREGROUND_COLOR_DICT[2048],
+                                font=constants_module.FONT)
+        game_over_label.pack()
