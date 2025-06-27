@@ -8,7 +8,8 @@ SIZE = 400
 # Color and Font Settings
 # Background color of the game window
 # Background color for empty grid cells
-
+BACKGROUND_COLOR_GAME = "#92877d"
+BACKGROUND_COLOR_CELL_EMPTY = "#9e948a"
 # Background colors for each tile value
 
 # Foreground (text) colors for each tile value
