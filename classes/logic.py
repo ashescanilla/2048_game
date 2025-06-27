@@ -40,7 +40,7 @@ def compress(board):
                     moved = True
                 position += 1
 # Return the new board and move status
-
+    return new_board, moved 
 # Track whether any merge occurred
 # Loop through each row
 # Loop through each tile except the last in the row
