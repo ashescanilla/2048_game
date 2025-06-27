@@ -68,19 +68,32 @@ def transpose(board):
 # Then merge adjacent equal tiles
 # Compress again to shift after merging
 # Return the final board and whether a move occurred
-
+def move_left(board):
+    compressed_board, did_compress = compress(board)
+    merged_board, did_merge = merge(compressed_board)
+    final_board, _ = compress(merged_board)
+    return final_board, did_compress or did_merge
 # Reverse the board to reuse left logic
 # Perform left move on reversed board
 # Reverse back and return result
-
+def move_right(board):
+    reversed_board = reverse(board)
+    moved_board, moved = move_left(reversed_board)
+    return reverse(moved_board), moved
 # Transpose to reuse left move logic
 # Perform left move on transposed board
 # Transpose back and return result
-
+def move_up(board):
+    transposed_board = transpose(board)
+    moved_board, moved = move_left(transposed_board)
+    return transpose(moved_board), moved
 # Transpose the board
 # Perform right move on transposed board
 # Transpose back and return result
-
+def move_down(board):
+    transposed_board = transpose(board)
+    moved_board, moved = move_right(transposed_board)
+    return transpose(moved_board), moved
 # Check for any empty cell in the board
 # Game is not over if at least one empty cell exists
 
