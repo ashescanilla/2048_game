@@ -1,5 +1,5 @@
 # Import the random module to generate random numbers
-
+import random
 # Define the size of the 2048 game board (4x4 grid)
 
 # Create and return a 4x4 grid initialized with zeros
