@@ -12,11 +12,15 @@ def generate_random_position():
 # Define the main GameGrid class inheriting from Tkinter Frame
 # Initialize the game window
 # Initialize the parent Frame class
-
+class GameGrid(Frame):
+    def __init__(self):
+        Frame.__init__(self)
 # Use grid geometry manager to organize widgets
 # Set the window title to "2048"
 # Bind keyboard input to key_down_handler method
-
+        self.grid()
+        self.master.title('2048')
+        self.master.bind("<Key>", self.key_down_handler)
 # Map movement keys to their corresponding logic functions
 
 # Initialize an empty list to hold the grid's label widgets
