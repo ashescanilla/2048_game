@@ -41,7 +41,10 @@ class GameGrid(Frame):
 # Set up the visual grid interface
 # Create the background frame
 # Place the background frame on the grid
-
+    def init_grid(self):
+        background = Frame(self, bg=constants_module.BACKGROUND_COLOR_GAME,
+                           width=constants_module.SIZE, height=constants_module.SIZE)
+        background.grid()
 # Loop over each row index
 # Create a new list to hold this row's labels
 # Loop over each column index
