@@ -22,7 +22,12 @@ class GameGrid(Frame):
         self.master.title('2048')
         self.master.bind("<Key>", self.key_down_handler)
 # Map movement keys to their corresponding logic functions
-
+        self.commands = {
+            'Up': logic.move_up,
+            'Down': logic.move_down,
+            'Left': logic.move_left,
+            'Right': logic.move_right
+        }
 # Initialize an empty list to hold the grid's label widgets
 # Call method to create visual grid
 # Call method to initialize the game matrix
