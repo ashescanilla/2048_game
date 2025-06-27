@@ -32,9 +32,12 @@ class GameGrid(Frame):
 # Call method to create visual grid
 # Call method to initialize the game matrix
 # Call method to update the grid UI with values
-
+        self.grid_cells = []
+        self.init_grid()
+        self.init_matrix()
+        self.update_grid_cells()
 # Start the Tkinter main event loop
-
+        self.mainloop() 
 # Set up the visual grid interface
 # Create the background frame
 # Place the background frame on the grid
