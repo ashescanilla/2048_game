@@ -25,5 +25,17 @@ BACKGROUND_COLOR_DICT = {
     2048: "#edc22e",    # Deep gold
 }
 # Foreground (text) colors for each tile value
-
+FOREGROUND_COLOR_DICT = {
+    2: "#776e65",       # Dark brown
+    4: "#776e65",       # Same as for 2
+    8: "#f9f6f2",       # Off-white
+    16: "#f9f6f2",      # Off-white
+    32: "#f9f6f2",      # Off-white
+    64: "#f9f6f2",      # Off-white
+    128: "#f9f6f2",     # Off-white
+    256: "#f9f6f2",     # Off-white
+    512: "#f9f6f2",     # Off-white
+    1024: "#f9f6f2",    # Off-white
+    2048: "#f9f6f2",    # Off-white
+}
 # Font used for displaying tile numbers (font family, size, style)
